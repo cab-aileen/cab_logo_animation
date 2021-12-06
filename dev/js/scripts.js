@@ -15,7 +15,7 @@ const mainTL = gsap.timeline();
 
 function worldrotateandscale(){
     const tl =gsap.timeline();
-    tl.from("#small-full-earth",{duration:1, scaleX:2})
+    tl.to("#small-full-earth",{duration:1,scale:3})
     return tl; 
 }
 

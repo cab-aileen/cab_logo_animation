@@ -5,10 +5,8 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { Flip } from "gsap/Flip";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { CustomEase } from "gsap/CustomEase";
 
-gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin,CustomEase);
-
+gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin);
 
 
 const mainTL = gsap.timeline();
@@ -17,7 +15,7 @@ const mainTL = gsap.timeline();
 
 function worldrotateandscale(){
     const tl =gsap.timeline();
-
+    tl.from("#small-full-earth",{duration:1, scaleX:2})
     return tl; 
 }
 
@@ -71,7 +69,8 @@ mainTL.add(worldrotateandscale())
         .add(clawsthrowletters())
         .add(leavescomeinwithsmoke());
 
-        
+
+
 GSDevTools.create();
 MorphSVGPlugin.create();
 DrawSVGPlugin.create();

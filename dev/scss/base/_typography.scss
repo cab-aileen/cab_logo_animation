@@ -1,17 +1,19 @@
 /* =============
     Typography
 ============= */
-h1,h2,h3,h4{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
 }
 
-p{
-    margin: 0;
-    padding: 0;
+p {
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-    font-size: rem-calc(100);
-    color: red;
+h1 {
+  font-size: rem-calc(100);
 }

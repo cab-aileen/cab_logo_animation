@@ -352,6 +352,14 @@ template {
 /* =============
     Base
 ============= */
+.gs-dev-tools {
+  z-index: 2000;
+}
+
+.hide {
+  display: none;
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -363,6 +371,10 @@ ul {
 }
 ul li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* =============
@@ -414,7 +426,6 @@ textarea {
     Footer
 ============= */
 #logo {
-  position: fixed;
   height: 100vh;
   width: 100%;
 }

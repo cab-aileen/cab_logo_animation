@@ -50,6 +50,36 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/design\/clawshavefingers.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/clawshavefingers.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/fixedbottomandtopdrgon.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/fixedbottomandtopdrgon.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/fixedbottomsizedragon.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/fixedbottomsizedragon.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/design\/fixedsmallearth.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -65,6 +95,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/design\/igc-svg.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/topdragonmoved.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/topdragonmoved.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

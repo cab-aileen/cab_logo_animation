@@ -7,6 +7,7 @@ import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { CustomEase } from "gsap/CustomEase";
 
+
 gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin,CustomEase);
 
 gsap.set("#left-wing-7",{transformOrigin:"bottom"});
@@ -56,28 +57,19 @@ function wingsflapwithshadowandscrollsopen(){
     tl.from("#claws",{alpha:0,delay:0.8})
     .from("#original-wings",{scale:0,duration:1})
     .from("#hidden-face",{autoAlpha:0,duration:2,y:"-=-300"})
-    .to("#right-wing_2",{rotation:-50,repeat: 9,yoyo: true, duration:1,transformOrigin:'left'},"sametime")
-    .to("#left-wing_2",{rotation:50,repeat: 9,yoyo: true, duration:1,transformOrigin:'right'},"sametime")
+    .to("#right-wing_2",{rotation:-50,repeat: 7,yoyo: true, duration:1,transformOrigin:'left'},"sametime")
+    .to("#left-wing_2",{rotation:50,repeat: 7,yoyo: true, duration:1,transformOrigin:'right'},"sametime")
     .from("#vector-39,#vector-40,#vector-41,#vector-42,#vector-43,#vector-44",{drawSVG:0})
     .to("#hidden-face",{translateY:"-=120"})
     .to("#hidden-face",{duration:0.5,translateY:"-=-60"})
     .from("#face",{autoAlpha:0},"-=0.15")
-    .from("#face",{transformOrigin:'center',repeat: 9,yoyo: true},"sametime")
+    .from("#face",{transformOrigin:'center',repeat: 7,yoyo: true},"sametime")
 
-    .to("#big-shadow",{autoAlpha:0})
-    .to("#big-shadow", {duration: 1, morphSVG:"#small-shadow",repeat: 9,yoyo: true,transformOrigin:'center'},"sametime")
+    .to("#big-shadow",{alpha:0},"-=2")
+    .to("#big-shadow", {duration: 1, morphSVG:"#small-shadow",repeat: 7,yoyo: true,transformOrigin:'center'},"sametime")
+
 
     return tl;
-}
-
-function motionlines(){
-    const tl=gsap.timeline();
-    tl.from("#vector-39",{drawSVG:0})
-    .from("#vector-40",{drawSVG:0})
-    .from("#vector-41",{drawSVG:0})
-    .from("#vector-42",{drawSVG:0})
-    .from("#vector-43",{drawSVG:0})
-    .from("#vector-44",{drawSVG:0})
 }
 
 function clawsthrowletters(){
@@ -98,7 +90,6 @@ function leavescomeinwithsmoke(){
 mainTL.add(worldrotateandscale())
         .add(dragonscomein())
         .add(wingsflapwithshadowandscrollsopen())
-        .add(motionlines())
         .add(clawsthrowletters())
         .add(leavescomeinwithsmoke());
 

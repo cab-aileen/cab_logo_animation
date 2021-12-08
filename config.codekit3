@@ -60,6 +60,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/design\/addedmotionpath.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/addedmotionpath.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/design\/clawshavefingers.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -100,6 +110,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/design\/fixleaves.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/fixleaves.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/design\/greyigc.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -110,11 +130,31 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/design\/idk.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/idk.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/design\/igc-svg.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/design\/igc-svg.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/letters.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/letters.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

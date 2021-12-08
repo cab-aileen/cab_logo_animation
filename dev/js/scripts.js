@@ -22,6 +22,7 @@ gsap.set("#small-full-earth", {transformOrigin:"center"});
 gsap.set("#original-wings", {transformOrigin:"center"});
 
 const mainTL = gsap.timeline();
+CustomWiggle.create("myWiggle", {wiggles:11,type:"easeOut"});
 CustomEase.create("myEase","M0,0 C0.14,0 0.242,0.438 0.272,0.561 0.313,0.728 0.354,0.963 0.362,1 0.37,0.985 0.414,0.873 0.455,0.811 0.51,0.726 0.573,0.753 0.586,0.762 0.662,0.812 0.693,0.983 0.7,1 0.762,0.916 0.738,0.67 0.884,0.67 0.98,0.67 0.974,0.97 1,1 1.034,0.958 0.995,1.013 1,1 1.01,0.972 1,1 1,1 ")
 
 
@@ -76,10 +77,19 @@ function wingsflapwithshadowandscrollsopen(){
     return tl;
 }
 
-function clawsthrowletters(){
+function rightclawsthrowletters(){
     const tl =gsap.timeline();
     tl.to("#rightclaw",{autoAlpha:0})
-    .from("#right-claw_3",{alpha:0})
+    .from("#right-claw_3",{autoAlpha:0})
+    .from("#right-claw_3",{rotation:30, ease:"myWiggle"},"sametime")
+    .from("#vector-53",{autoAlpha:0},"sametime")
+    .from("#vector-53",{rotation:30, ease:"myWiggle"},"sametime")
+    .from("#vector-54",{autoAlpha:0},"sametime")
+    .from("#vector-54",{rotation:30, ease:"myWiggle"},"sametime")
+    .from("#vector-55",{autoAlpha:0},"sametime")
+    .from("#vector-55",{rotation:30, ease:"myWiggle"},"sametime")
+
+
 
     return tl;
 }
@@ -96,7 +106,7 @@ function leavescomeinwithsmoke(){
 mainTL.add(worldrotateandscale())
         .add(dragonscomein())
         .add(wingsflapwithshadowandscrollsopen())
-        .add(clawsthrowletters())
+        .add(rightclawsthrowletters())
         .add(leavescomeinwithsmoke());
 
 

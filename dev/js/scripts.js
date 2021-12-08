@@ -6,9 +6,11 @@ import { Flip } from "gsap/Flip";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { CustomEase } from "gsap/CustomEase";
+import { CustomWiggle} from "gsap/CustomWiggle";
 
 
-gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin,CustomEase);
+
+gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin,CustomEase,CustomWiggle);
 
 gsap.set("#left-wing-7",{transformOrigin:"bottom"});
 gsap.set("#right-wing-9", {transformOrigin:"top"});
@@ -18,7 +20,6 @@ gsap.set("#left-wing_57",{transformOrigin:"right"});
 gsap.set("#right-wing_5", {transformOrigin:"left"});
 gsap.set("#small-full-earth", {transformOrigin:"center"});
 gsap.set("#original-wings", {transformOrigin:"center"});
-
 
 const mainTL = gsap.timeline();
 CustomEase.create("myEase","M0,0 C0.14,0 0.242,0.438 0.272,0.561 0.313,0.728 0.354,0.963 0.362,1 0.37,0.985 0.414,0.873 0.455,0.811 0.51,0.726 0.573,0.753 0.586,0.762 0.662,0.812 0.693,0.983 0.7,1 0.762,0.916 0.738,0.67 0.884,0.67 0.98,0.67 0.974,0.97 1,1 1.034,0.958 0.995,1.013 1,1 1.01,0.972 1,1 1,1 ")
@@ -54,26 +55,31 @@ function dragonscomein(){
 
 function wingsflapwithshadowandscrollsopen(){
     const tl =gsap.timeline();
-    tl.from("#claws",{alpha:0,delay:0.8})
+    tl.from("#claws",{alpha:0})
     .from("#original-wings",{scale:0,duration:1})
     .from("#hidden-face",{autoAlpha:0,duration:2,y:"-=-300"})
+    .to("#neck_2",{scaleY:5,transformOrigin:'center'})
+    .from("#big-shadow",{autoAlpha:0,scale:0,transformOrigin:'center'})
     .to("#right-wing_2",{rotation:-50,repeat: 7,yoyo: true, duration:1,transformOrigin:'left'},"sametime")
     .to("#left-wing_2",{rotation:50,repeat: 7,yoyo: true, duration:1,transformOrigin:'right'},"sametime")
     .from("#vector-39,#vector-40,#vector-41,#vector-42,#vector-43,#vector-44",{drawSVG:0})
+    .from("#white345", {duration:0.7,alpha:0,scaleX:0,transformOrigin:"center"},"<" )
+    .from("#igc-ribbon", {duration:0.9,alpha:0,scaleX:0,transformOrigin:"center"},"<" )
     .to("#hidden-face",{translateY:"-=120"})
     .to("#hidden-face",{duration:0.5,translateY:"-=-60"})
     .from("#face",{autoAlpha:0},"-=0.15")
     .from("#face",{transformOrigin:'center',repeat: 7,yoyo: true},"sametime")
 
-    .to("#big-shadow",{alpha:0},"-=2")
+    .to("#big-shadow",{scale:0,alpha:0,transformOrigin:'center'},"-=0.9")
     .to("#big-shadow", {duration: 1, morphSVG:"#small-shadow",repeat: 7,yoyo: true,transformOrigin:'center'},"sametime")
-
 
     return tl;
 }
 
 function clawsthrowletters(){
     const tl =gsap.timeline();
+    tl.to("#rightclaw",{autoAlpha:0})
+    .from("#right-claw_3",{alpha:0})
 
     return tl;
 }

@@ -76,7 +76,7 @@ function wingsflapwithshadowandscrollsopen(){
     .to("#hidden-face",{translateY:"-=120"})
     .to("#hidden-face",{duration:0.5,translateY:"-=-60"})
     .from("#face",{autoAlpha:0},"-=0.15")
-    .from("#face",{transformOrigin:'center',repeat: 30,yoyo: true},"sametime")
+    .from("#face",{transformOrigin:'center'},"sametime")
 
     .to("#big-shadow",{scale:0,alpha:0,transformOrigin:'center'},"-=0.9")
     .to("#big-shadow", {duration: 1, morphSVG:"#small-shadow",repeat: 7,yoyo: true,transformOrigin:'center'},"sametime")
@@ -117,8 +117,6 @@ function rightclawsthrowletters(){
 
     .to("#vector-53,#vector-54,#vector-55",{alpha:0})
     .to("#right-claw_3",{rotate:-170, transformOrigin:'center',translateX:"-=10", translateY:"-=-15"} )
-
-
 
     return tl;
 }
